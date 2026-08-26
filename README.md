@@ -76,11 +76,7 @@ Northline-Studio/
 
 ## Screenshot
 
-Add a project screenshot at `docs/northline-studio.png`, then use this line in the README:
-
-```md
 ![Northline Studio](docs/northline-studio.png)
-```
 
 ## Notes
 

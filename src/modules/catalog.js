@@ -1,4 +1,3 @@
-cat << 'EOF' > src/modules/catalog.js
 export const collectionPieces = [
   {
     code: "NL-101",
@@ -82,4 +81,3 @@ export const collectionPieces = [
     description: "A compact watch selection built around practical proportions and classic finishes."
   }
 ];
-EOF

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#151515" />
+    <meta
+      name="description"
+      content="Northline Studio is an editorial fashion concept site built as a front-end portfolio project."
+    />
+    <link rel="icon" href="/src/assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/site.css" />
+    <title>Northline Studio — Editorial Fashion</title>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Northline Studio home">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">Northline Studio</span>
+      </a>
+
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+        <a href="#story">Story</a>
+        <a href="#collection">Collection</a>
+        <a href="#arrivals">New arrivals</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme">Theme</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="heroTitle">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+          <source src="/src/assets/editorial/studio-motion.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-shade"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">Independent fashion concept · 2026</p>
+          <h1 id="heroTitle">Dress with<br /><em>intention.</em></h1>
+          <div class="hero-footer">
+            <p>Quiet tailoring, strong silhouettes and everyday pieces designed to hold attention without asking for it.</p>
+            <a class="text-link" href="#collection">Explore the collection <span aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+        <p class="hero-index" aria-hidden="true">01 / 05</p>
+      </section>
+
+      <section class="ticker" aria-label="Studio principles">
+        <div class="ticker-track">
+          <span>Considered shapes</span><i></i><span>Useful details</span><i></i><span>Modern essentials</span><i></i><span>Limited runs</span><i></i>
+          <span>Considered shapes</span><i></i><span>Useful details</span><i></i><span>Modern essentials</span><i></i><span>Limited runs</span><i></i>
+        </div>
+      </section>
+
+      <section class="story section-shell" id="story">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Our point of view</p>
+          <h2>Built around the pieces you actually reach for.</h2>
+        </div>
+
+        <div class="story-grid">
+          <figure class="story-image story-image-main reveal">
+            <img src="/src/assets/editorial/red-editorial.webp" alt="Model in a red outfit against a red studio backdrop" loading="lazy" />
+          </figure>
+          <div class="story-copy reveal">
+            <p>Northline is a fictional studio created to explore a more restrained approach to fashion presentation. The visual system uses strong type, generous spacing and editorial photography instead of decorative clutter.</p>
+            <p>The collection mixes formal pieces, everyday layers and accessories. The site is designed to make that range easy to browse without losing the feel of a lookbook.</p>
+            <dl class="story-notes">
+              <div><dt>Focus</dt><dd>Modern wardrobe</dd></div>
+              <div><dt>Approach</dt><dd>Small collections</dd></div>
+              <div><dt>Season</dt><dd>Autumn / Winter 2026</dd></div>
+            </dl>
+          </div>
+          <figure class="story-image story-image-side reveal">
+            <img src="/src/assets/editorial/jewelry-detail.webp" alt="Hands styled with rings and understated jewelry" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="collection section-shell" id="collection">
+        <div class="collection-header reveal">
+          <div>
+            <p class="eyebrow">Current edit</p>
+            <h2>Collection 01</h2>
+          </div>
+          <div class="filters" id="collectionFilters" aria-label="Filter collection">
+            <button class="filter-button is-active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="clothing">Clothing</button>
+            <button class="filter-button" type="button" data-filter="accessories">Accessories</button>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="quote-band">
+        <div class="quote-band-inner reveal">
+          <p class="eyebrow">Design note</p>
+          <blockquote>Good clothes do not need a complicated explanation. They need proportion, material and a reason to stay in rotation.</blockquote>
+        </div>
+      </section>
+
+      <section class="arrivals section-shell" id="arrivals">
+        <div class="section-heading arrivals-heading reveal">
+          <div>
+            <p class="eyebrow">Recently added</p>
+            <h2>New arrivals</h2>
+          </div>
+          <div class="rail-controls" aria-label="New arrival controls">
+            <button id="arrivalPrev" type="button" aria-label="Previous arrivals">←</button>
+            <button id="arrivalNext" type="button" aria-label="Next arrivals">→</button>
+          </div>
+        </div>
+
+        <div class="arrival-rail" id="arrivalRail">
+          <article class="arrival-card reveal">
+            <img src="/src/assets/editorial/denim-city.webp" alt="Denim jacket styled on a city rooftop" loading="lazy" />
+            <div><span>01</span><h3>Denim layer</h3><p>Structured denim with a relaxed shape.</p></div>
+          </article>
+          <article class="arrival-card reveal">
+            <img src="/src/assets/editorial/yellow-dress.webp" alt="Long yellow dress photographed outdoors" loading="lazy" />
+            <div><span>02</span><h3>Long dress</h3><p>A full-length silhouette with clean movement.</p></div>
+          </article>
+          <article class="arrival-card reveal">
+            <img src="/src/assets/editorial/leather-jacket.webp" alt="Black leather jacket styled over a white shirt" loading="lazy" />
+            <div><span>03</span><h3>Leather jacket</h3><p>An everyday outer layer with a sharper edge.</p></div>
+          </article>
+          <article class="arrival-card reveal">
+            <img src="/src/assets/editorial/yellow-shirt.webp" alt="Bright yellow T-shirt styled against a warm wall" loading="lazy" />
+            <div><span>04</span><h3>Studio T-shirt</h3><p>A simple cotton base with a saturated finish.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section-shell" id="contact">
+        <div class="contact-panel reveal">
+          <p class="eyebrow">Studio notes</p>
+          <h2>A short update when a new edit is ready.</h2>
+          <p>No sales funnel. Just collection notes, release dates and occasional process updates.</p>
+          <form class="newsletter" id="newsletterForm" novalidate>
+            <label for="emailAddress" class="sr-only">Email address</label>
+            <input id="emailAddress" name="email" type="email" autocomplete="email" placeholder="Email address" required />
+            <button type="submit">Join the list</button>
+          </form>
+          <p class="form-message" id="formMessage" role="status"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span class="brand-mark brand-mark-footer">N</span>
+        <p>Northline Studio</p>
+      </div>
+      <p>Front-end portfolio concept. Built with HTML, CSS and JavaScript.</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <dialog class="product-dialog" id="productDialog" aria-labelledby="dialogTitle">
+      <button class="dialog-close" id="dialogClose" type="button" aria-label="Close product details">×</button>
+      <div class="dialog-layout">
+        <img id="dialogImage" src="" alt="" />
+        <div class="dialog-copy">
+          <p class="eyebrow" id="dialogCategory"></p>
+          <h2 id="dialogTitle"></h2>
+          <p id="dialogDescription"></p>
+          <div class="dialog-meta"><span id="dialogCode"></span><span>Concept sample</span></div>
+          <button class="dialog-action" id="dialogAction" type="button">Save to shortlist</button>
+        </div>
+      </div>
+    </dialog>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
